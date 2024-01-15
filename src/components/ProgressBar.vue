@@ -5,8 +5,6 @@ const { totalBiden, totalTrump } = defineProps(['totalBiden', 'totalTrump'])
 
 const totalVotes = totalBiden + totalTrump;
 
-const porcentagemBiden = computed(() => (totalBiden / totalVotes) * 100)
-const porcentagemTrump = computed(() => (totalTrump / totalVotes) * 100)
 </script>
 
 <template>

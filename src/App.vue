@@ -2,7 +2,7 @@
 import Biden from './components/Biden.vue'
 import Trump from './components/Trump.vue'
 import Result from './components/Result.vue'
-import ProgressBar from './components/Progressbar.vue'
+import Progressbar from './components/Progressbar.vue'
 import {ref, reactive, computed} from 'vue'
 
 const states = reactive([
@@ -95,7 +95,7 @@ const totalTrump = computed(() => {
 <template>
   <div class="container">
     <Result :totalBiden="totalBiden" :totalTrump="totalTrump"/>
-    <ProgressBar :totalBiden="totalBiden" :totalTrump="totalTrump"/>
+    <Progressbar :totalBiden="totalBiden" :totalTrump="totalTrump"/>
     <Biden :biden="bidenStates"/>
     <Trump :trump="trumpStates"/>
   </div>
