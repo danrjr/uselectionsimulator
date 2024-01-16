@@ -1,17 +1,21 @@
 <script setup>
+import {computed } from 'vue';
 
-const { totalBiden, totalTrump } = defineProps(['totalBiden', 'totalTrump'])
+const { totalBiden, totalTrump } = defineProps(['totalBiden', 'totalTrump']);
 
-const totalVotes = totalBiden + totalTrump;
-
+const totalVotes = computed(() => totalBiden + totalTrump);
+const porcentagemBiden = computed(() => (totalBiden / totalVotes.value) * 100);
+const porcentagemTrump = computed(() => (totalTrump / totalVotes.value) * 100);
 </script>
 
 <template>
   <div class="progress">
-    <div class="biden" :style="{ width: `${Math.round((totalBiden / totalVotes) * 100)}%`, left: '0' }">{{ totalBiden }}</div>
-    <div class="trump" :style="{ width: `${Math.round((totalTrump / totalVotes) * 100)}%`, right: '0' }"> {{ totalTrump }}</div>
+    <div class="biden" :style="{ width: `${Math.round(porcentagemBiden)}%`, left: '0' }">{{ totalBiden }}</div>
+    <div class="trump" :style="{ width: `${Math.round(porcentagemTrump)}%`, right: '0' }">{{ totalTrump }}</div>
   </div>
 </template>
+
+
   
 <style scoped>
 .progress {
