@@ -5,7 +5,7 @@ import {reactive, computed} from 'vue'
 import Biden from './components/Biden.vue'
 import Trump from './components/Trump.vue'
 import Result from './components/Result.vue'
-import Progressbar from './components/Progressbar.vue';
+// import Progressbar from './components/Progressbar.vue';
 
 const states = reactive([
   {state: 'Alabama', electoralVotes: 9, winner: 'T'},
