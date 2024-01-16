@@ -1,5 +1,4 @@
 <script setup>
-import { computed } from 'vue'
 
 const { totalBiden, totalTrump } = defineProps(['totalBiden', 'totalTrump'])
 

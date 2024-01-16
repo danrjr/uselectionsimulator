@@ -1,5 +1,5 @@
 <script setup>
-import {ref, reactive, computed} from 'vue'
+import {ref} from 'vue'
 defineProps(['totalBiden', 'totalTrump'])
 
 const trump = ref('https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Trump_Circle.png/599px-Trump_Circle.png')

@@ -1,5 +1,4 @@
 <script setup>
-import {computed} from 'vue'
 defineProps(['biden', 'totalBiden']);
 
 </script>
